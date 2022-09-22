@@ -1,0 +1,51 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+        String A=sc.next();
+        String B=sc.next();
+        sc.close();
+        /* Enter your code here. Print output to STDOUT. */
+        int a = A.length();
+        int b = B.length();
+        int c = a+b;
+        System.out.println(c);
+        String[] arr = new String[2];
+        arr[0]=A;
+        arr[1]=B;
+         Arrays.sort(arr, String.CASE_INSENSITIVE_ORDER);
+        if(arr[0]==A){
+            System.out.println("No");
+        }
+        else{
+            System.out.println("Yes");
+        }
+        String[] arr2 = new String[2];
+        arr2[0]=A;
+        arr2[1]=B;
+        
+         String newString ="";
+        
+        for(String w: arr2 ){
+            String first = w.substring(0,1);      //First Letter
+            String rest = w.substring(1);         //Rest of the letters
+        
+            //Concatenete and reassign after 
+            //converting the first letter to uppercase
+            newString+=first.toUpperCase()+ rest+ " ";  
+        }  
+    
+        //trim to remove the last redundant blank space
+        System.out.println(newString);
+        
+        
+        
+    }
+}
+
+
+
