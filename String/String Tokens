@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        
+        Scanner sc = new Scanner(System.in);
+        String a = sc.nextLine();
+        sc.close();
+        a= a.trim();
+        if(a.length()==0)
+        {
+            System.out.println("0");
+        }
+        else
+        {
+        String[] b = a.split("['!?,._@ ]+");
+        int x = b.length;
+        System.out.println(x);
+        for(String c : b){
+            System.out.println(c);
+        }
+        }
+        
+        
+        
+    }
+}
