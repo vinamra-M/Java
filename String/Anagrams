@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        String a = sc.nextLine();
+        String b = sc.nextLine();
+        sc.close();
+        boolean p = isAnagram(a,b);
+        System.out.println( (p) ? "Anagrams" : "Not Anagrams" );
+        
+        
+        
+    }
+    public static boolean isAnagram(String x, String y){
+        String x1 = x.toLowerCase();
+        String y1 = y.toLowerCase();
+        char[] a1 = x1.toCharArray();
+        char[] a2 = y1.toCharArray();
+        Arrays.sort(a1);
+        Arrays.sort(a2);
+        return Arrays.equals(a1,a2);
+        
+    }
+} 
