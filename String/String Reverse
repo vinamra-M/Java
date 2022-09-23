@@ -1,0 +1,31 @@
+import java.lang.*;
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String Str = sc.nextLine();
+        sc.close();
+    int a =0;
+    int k = Str.length();
+    for(int i=0;i<k/2;i++)
+    {
+        if(Str.charAt(i)==Str.charAt(k-i-1))
+        {
+            a++;
+        }
+    }
+    if(a == k/2)
+    {
+        System.out.println("Yes");
+    }
+    else
+    {
+        System.out.println("No");
+    }
+
+          
+    }
+}
