@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for(int i = 0; i<n;i++){
+            arr[i] = sc.nextInt();
+        }
+        sc.close();
+        int sum = 0;
+        int ans = 0;
+        for(int j = 0; j<n;j++){
+            for(int k = 0; k<n;k++){
+                if(j==k){
+                    sum=arr[j];
+                    if(sum<0){
+                        ans++;
+                        }                
+                    }
+                else if(j<k){
+                    sum+=arr[k];
+                    if(sum<0){
+                        ans++;
+                    }
+                }
+            }
+            sum = 0;
+        }
+        System.out.println(ans);
+    }
+}
